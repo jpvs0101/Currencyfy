@@ -1,0 +1,2 @@
+include ':app', ':currencyfy'
+rootProject.name='CurrencyfySample'
