@@ -9,5 +9,6 @@ currencyfy (500000.78, false, false) -> 500,001
 
 currencyfy (new Locale("en", "in"), 500000.78) -> ₹ 5,00,000.78
 
-![Image screenshot](https://github.com/jpvs0101/Currencyfy/blob/master/Screenshots/Screenshot_01.png)
+<img src="https://github.com/jpvs0101/Currencyfy/blob/master/Screenshots/Screenshot_01.png" width="320">
+
 
