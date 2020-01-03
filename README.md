@@ -14,7 +14,13 @@ currencyfy (new Locale("en", "in"), 500000.78) -> ₹ 5,00,000.78
 
 
 
-To get a Git project into your build:
+<b>Wows:</b>
+* Auto prettify (Automatically add space between currency symbol & number)
+* Works correctly on older versions of Android
+* Works correctly with RTL languages 
+
+
+<br><b>To get a Git project into your build:</b>
 
 Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
