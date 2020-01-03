@@ -1,5 +1,6 @@
 # Currencyfy
 [Android] [Java]   Converts number to readable currency format. Easy, error free &amp; highly compatible!
+[![](https://jitpack.io/v/jpvs0101/Currencyfy.svg)](https://jitpack.io/#jpvs0101/Currencyfy)
 
 currencyfy (500000.78) -> $ 500,000.78
 
