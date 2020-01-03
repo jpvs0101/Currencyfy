@@ -1,5 +1,5 @@
 # Currencyfy
-[Android] [Java]   Converts number to readable currency format. Lite, easy, error free & highly compatible with older versions of Android!
+Converts number to readable currency format (with currency symbol & separator). Lite, easy, error free & highly compatible with older versions of Android!
 
 [![](https://jitpack.io/v/jpvs0101/Currencyfy.svg)](https://jitpack.io/#jpvs0101/Currencyfy)
 
