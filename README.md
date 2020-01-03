@@ -2,13 +2,13 @@
 [Android] [Java]   Converts number to readable currency format. Easy, error free &amp; highly compatible!
 [![](https://jitpack.io/v/jpvs0101/Currencyfy.svg)](https://jitpack.io/#jpvs0101/Currencyfy)
 
-currencyfy (500000.78) -> $ 500,000.78
+currencyfy (500000.78) -> $ 500,000.78 // default
 
-currencyfy (500000.78, false) -> $ 500,001
+currencyfy (500000.78, false) -> $ 500,001 // hide fraction (will round off automatically!)
 
-currencyfy (500000.78, false, false) -> 500,001
+currencyfy (500000.78, false, false) -> 500,001 // hide fraction & currency symbol
 
-currencyfy (new Locale("en", "in"), 500000.78) -> ₹ 5,00,000.78
+currencyfy (new Locale("en", "in"), 500000.78) -> ₹ 5,00,000.78 // custom locale
 
 <img src="https://github.com/jpvs0101/Currencyfy/blob/master/Screenshots/Screenshot_01.png" width="320">
 
