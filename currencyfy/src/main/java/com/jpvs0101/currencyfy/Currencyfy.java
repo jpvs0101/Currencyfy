@@ -21,16 +21,16 @@ public class Currencyfy {
     private static final String NBSP_CHAR = Character.toString((char) 160);
 
     private static final String SPACE = " ";
-    private static Locale DEFAULT_LOCALE = Locale.getDefault(); // We use default locale if user not specified
+    @NonNull private static Locale DEFAULT_LOCALE = Locale.getDefault(); // We use default locale if user not specified
 
     private Currencyfy() { // No need constructor
     }
 
-    public static Locale getDefaultLocale() {
+    @NonNull public static Locale getDefaultLocale() {
         return DEFAULT_LOCALE;
     }
 
-    public static void setDefaultLocale(Locale defaultLocale) {
+    public static void setDefaultLocale(@NonNull final Locale defaultLocale) {
         DEFAULT_LOCALE = defaultLocale;
     }
 
