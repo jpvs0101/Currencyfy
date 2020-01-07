@@ -138,14 +138,18 @@ public class Currencyfy {
         String currencyfied;
         if (currencySymbol) {
             currencyfied = nf.format(number);
+            /* Some currency symbols comes with nbsp char (Ex: ₹), since we add space ourselves,
+               we remove the nbsp char.
+             */
             currencyfied = currencyfied.replace(NBSP_CHAR, "");
             final String symbol = Currency.getInstance(locale).getSymbol(locale);
-            // We prefix/suffix (based on language direction) for prettiness
-            final String spacedSymbol = TextUtilsCompat.getLayoutDirectionFromLocale(locale)
-                    == ViewCompat.LAYOUT_DIRECTION_RTL ? SPACE.concat(symbol) : symbol.concat(SPACE);
+            /* We prefix & suffix space with currency symbol. In the end we will trim outer spaces.
+                This is useful for currencies like euro (Locale.FRANCE) which adds currency symbol at the end.
+             */
+            final String spacedSymbol = SPACE.concat(symbol).concat(SPACE);
             currencyfied = currencyfied.replace(symbol, spacedSymbol);
 
-        } else { // Remove currency symbol
+        } else { // User requested to remove currency symbol
             final DecimalFormatSymbols decimalFormatSymbols
                     = ((DecimalFormat) nf).getDecimalFormatSymbols();
             decimalFormatSymbols.setCurrencySymbol("");
@@ -153,7 +157,7 @@ public class Currencyfy {
             currencyfied = nf.format(number);
         }
 
-        return currencyfied;
+        return currencyfied.trim(); // Trim outer spaces
 
     }
 }
